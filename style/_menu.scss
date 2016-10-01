@@ -1,0 +1,18 @@
+@import '_type';
+
+.menu {
+  list-style-type: none;
+
+  height: $lh * 2;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Wordpress doesn't let us choose a class name for menu items
+.menu-item {
+  @include type-setting();
+}
+

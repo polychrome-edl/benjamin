@@ -1,0 +1,14 @@
+@import '_type';
+
+/** Global layout **/
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 960px;
+  margin: $lh auto;
+}
+
+@import '_menu';
