@@ -1,9 +1,10 @@
 @import '_type';
 
-/** Global layout **/
+// Global layout
 
 body {
   margin: 0;
+  background-color: white;
 }
 
 .wrapper {
@@ -11,4 +12,7 @@ body {
   margin: $lh auto;
 }
 
+// Header
+
 @import '_menu';
+@import '_banner';

@@ -15,6 +15,7 @@
     <div class="wrapper">
       <header>
         <!-- Banner -->
+        <img alt="" src="<?php header_image(); ?>" class="banner">
 
         <!-- Carousel -->
 
