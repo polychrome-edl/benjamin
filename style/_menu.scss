@@ -3,16 +3,19 @@
 .menu {
   list-style-type: none;
 
-  height: $lh * 2;
+  min-height: $lh * 2;
   padding: 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 // Wordpress doesn't let us choose a class name for menu items
 .menu-item {
+  display: block;
+  padding: 0 $lh;
   @include type-setting();
 }
 

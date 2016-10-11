@@ -1,0 +1,72 @@
+main {
+  //background-color: grey;
+}
+
+.article {}
+
+.article--card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  margin-bottom: $lh;
+
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.article--card:nth-child(2n+1) {
+  flex-direction: row-reverse;
+}
+
+.article__thumbnail {
+  overflow: hidden;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.article--card .article__thumbnail {
+  flex-basis: 150px;
+  flex-shrink: 0;
+}
+
+.article--card__content {
+  flex-grow: 1;
+  padding: $lh 0;
+  background-color: white;
+}
+
+.article--card__content .article__header {
+  padding: 0 $lh;
+}
+
+.article__title {
+  text-align: center;
+}
+
+.article--card__content .article__title {
+  text-align: left;
+}
+
+.article__body {
+  padding: 0 $lh;
+}
+
+.article__body--excerpt p {
+  margin-bottom: 0;
+}
+
+.thumbnail-image {
+  position: relative;
+}
+
+.thumbnail-image__image {
+  display: block;
+  height: 100%;
+  width: auto;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  z-index: -1; // Needed in order to render the box shadow over it
+}

@@ -1,0 +1,36 @@
+
+/*
+ * STYLES AND FONTS 
+ */
+
+html {
+  font-family: "Fira Sans", "Hevletica Neue", sans-serif;
+  line-height: $base-line-height;
+  font-size: $base-font-size;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+p {
+  @include type-setting();
+  letter-spacing: -.025em;
+  margin-top: 0;
+  margin-bottom: $lh;
+}
+
+h1 {
+  @include type-setting(2);
+  margin-top: 0;
+  margin-bottom: $lh * 0.5;
+}
+
+h2 {
+  @include type-setting(1);
+  margin-top: 0;
+  margin-bottom: $lh * 0.5;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.8);
+  @include underline(pink);
+}
