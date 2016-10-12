@@ -2,7 +2,7 @@
 get_header();
 ?>
 <header>
-  <h1>Articles</h1>
+  <h1><?php post_type_archive_title(); ?></h1>
 </header>
 <?php
 if (have_posts()) :
