@@ -1,7 +1,27 @@
-.feature {}
+.event-feature {
+  @extends .thumbnail-image;
+}
 
-.feature__background {
-  display: block;
+.event-feature__background {
+  @extends .thumbnail-image__image;
   height: 100%;
   width: auto;
+}
+
+.event-feature__info {
+  position: absolute;
+  bottom: $lh / 2;
+  right: $lh / 2;
+  padding: $lh / 2;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.event-feature__p {
+  margin: 0;
+  text-align: center;
+}
+
+.event-feature__p--small {
+  @include type-setting(-1);
 }

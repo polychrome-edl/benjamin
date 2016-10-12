@@ -1,34 +1,101 @@
-main {
-  //background-color: grey;
+/*
+ * ARTICLE HEADER
+ */
+
+.article__header {
+  @media (max-width: $width-breakpoint) {
+    padding: 0 $lh / 2;
+  }
 }
+
+.article__title {
+  text-align: center;
+  margin-bottom: $lh * 0.4;
+}
+
+.article__meta {
+  text-align: center;
+  margin-bottom: $lh * 0.75;
+  color: rgba(0,0,0,0.5);
+  @include type-setting(-1);
+}
+
+.article__body p {
+  margin-top: 0;
+  margin-bottom: $lh * 0.5;
+}
+
+.article__body h2, .article__body h3 {
+  margin-top: $lh;
+  margin-bottom: $lh * 0.5;
+}
+
+/*
+ * ARTICLE BODY
+ */
+
+.article__body {
+  padding: 0 $lh;
+  @media (max-width: $width-breakpoint) {
+    padding: 0 $lh / 2;
+  }
+}
+
+/*
+ * ARTICLE THUMBNAIL
+ */
+
+.thumbnail-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbnail-image__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  z-index: -1; // Needed in order to render the box shadow over it
+}
+
+
+/*
+ * ARTICLE CARDS
+ */
 
 .article--card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: stretch;
 
   padding: 0;
   margin-bottom: $lh;
 
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-
-  @media (max-width: $width-breakpoint) {
-    flex-direction: column;
-  }
 }
 
-.article--card:nth-child(2n+1) {
-  @media (min-width: $width-breakpoint) {
-    flex-direction: row-reverse;
+@media (min-width: $width-breakpoint) {
+  .article--card--row:nth-child(2n+0) {
+    flex-direction: row;
   }
-}
 
-.article__thumbnail {
-  overflow: hidden;
-  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+  .article--card--row:nth-child(2n+1) {
+      flex-direction: row-reverse;
+  }
+
+  .article--card--row .thumbnail-image__image {
+    height: 100%;
+    width: auto;
+  }
 }
 
 .article--card .article__thumbnail {
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
   flex-basis: 150px;
   flex-shrink: 0;
 }
@@ -39,12 +106,6 @@ main {
   background-color: white;
 }
 
-.article__header {
-  @media (max-width: $width-breakpoint) {
-    padding: 0 $lh / 2;
-  }
-}
-
 .article--card__content .article__header {
   padding: 0 $lh;
 
@@ -53,43 +114,10 @@ main {
   }
 }
 
-.article__title {
-  text-align: center;
-}
-
 .article--card__content .article__title {
   text-align: left;
 }
 
-.article__body {
-  padding: 0 $lh;
-  @media (max-width: $width-breakpoint) {
-    padding: 0 $lh / 2;
-  }
-}
-
 .article__body--excerpt p {
   margin-bottom: 0;
-}
-
-.thumbnail-image {
-  position: relative;
-}
-
-.thumbnail-image__image {
-  display: block;
-  height: 100%;
-  width: auto;
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
-  z-index: -1; // Needed in order to render the box shadow over it
-
-  @media (max-width: $width-breakpoint) {
-    width: 100%;
-    height: auto;
-  }
 }

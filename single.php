@@ -9,7 +9,7 @@ while ( have_posts() ) : the_post();
 <article class="article">
   <header class="article__header">
     <h1 class="article__title"><?php single_post_title(); ?></h1>
-    <!-- Time? -->
+    <p class="article__meta"><?php echo get_the_date(); ?>, <?php the_time(); ?></p>
   </header>
   <div class="article__thumbnail"></div>
   <section class="article__body">

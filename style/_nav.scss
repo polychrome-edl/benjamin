@@ -1,8 +1,5 @@
-@import '_type';
-
-.menu {
+.nav {
   list-style-type: none;
-
   min-height: $lh * 2;
   padding: 0;
 
@@ -12,10 +9,15 @@
   flex-wrap: wrap;
 }
 
-// Wordpress doesn't let us choose a class name for menu items
-.menu-item {
+.nav__item {
   display: block;
   padding: 0 $lh;
+  text-align: center;
   @include type-setting();
+}
+
+// Wordpress doesn't let us choose a class name for menu items
+.menu-item {
+  @extend .nav__item;
 }
 
