@@ -6,8 +6,12 @@
 html {
   font-family: "Fira Sans", "Hevletica Neue", sans-serif;
   line-height: $base-line-height;
-  font-size: $base-font-size;
+  font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
+
+  @media (max-width: $width-breakpoint) {
+    font-size: 16px;
+  }
 }
 
 p {
