@@ -36,5 +36,5 @@ h2 {
 a {
   text-decoration: none;
   color: rgba(0,0,0,0.8);
-  @include underline(pink);
+  @include underline(rgba(177,172,227,1));
 }
