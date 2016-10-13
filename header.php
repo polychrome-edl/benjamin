@@ -36,7 +36,7 @@
           $query = new WP_Query(
             array(
               'post_type' => 'events',
-              'posts_per_page' => 10,
+              'posts_per_page' => 5,
               'order' => 'DESC',
               'orderby' => 'meta_value_num',
               'meta_key' => 'events_date_start_epoque'
@@ -47,7 +47,7 @@
             while($query->have_posts()):
               $query->the_post();
               $custom = get_post_custom();
-              ?>
+        ?>
 
           <div class="carousel__cell event-feature">
             <a href="<?php echo get_permalink(); ?>">
