@@ -51,8 +51,8 @@
 
           <div class="carousel__cell event-feature">
             <a href="<?php echo get_permalink(); ?>">
-              <img alt="" class="event-feature__background"
-                src="<?php the_post_thumbnail_url(); ?>"
+              <img alt="" class="event-feature__image"
+                src="<?php the_post_thumbnail_url('large'); ?>"
                 alt="">
             </a>
             <div class="event-feature__info">
