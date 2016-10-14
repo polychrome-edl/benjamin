@@ -1,9 +1,8 @@
 .event-feature {
-  @extends .thumbnail-image;
+  // position: relative; // Flickity overrides this with absolute
 }
 
 .event-feature__image {
-  @extends .thumbnail-image__image;
   height: 100%;
   width: auto;
 }

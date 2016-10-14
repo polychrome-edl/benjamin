@@ -10,7 +10,8 @@
       autoPlay: true,
       pageDots: false,
       cellSelector: '.carousel__cell',
-      imagesLoaded: true
+      imagesLoaded: true,
+      wrapAround: true
     });
     </script>
     <?php endif; ?>
