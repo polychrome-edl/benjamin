@@ -3,8 +3,9 @@
         <!-- Footer -->
       </footer>
     </div>
-    <?php wp_footer(); ?>
-    <?php if(is_front_page()): ?>
+    <?php wp_footer();
+    
+    if(is_front_page()): ?>
     <script type="text/javascript">
     var flky = new Flickity('.carousel', {
       autoPlay: true,

@@ -58,7 +58,7 @@
             </a>
             <div class="event-feature__info">
               <p class="event-feature__p"><b><?php the_title(); ?></b></p>
-              <p class="event-feature__p event-feature__p--small"> <?php echo date_i18n(get_option('date_format'), $custom['events_date_start_epoque'][0]); ?></p>
+              <p class="event-feature__p event-feature__p--small"><?php echo date_i18n(get_option('date_format'), $custom['events_date_start_epoque'][0]); ?></p>
             </div>
           </div>
 

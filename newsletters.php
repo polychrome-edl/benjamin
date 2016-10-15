@@ -12,6 +12,8 @@ $wp_query = new WP_Query(array(
 ));
 ?>
 
+
+
 <?php while(have_posts()): the_post(); ?>
 
 <article <?php post_class('article article--card'); ?>>
@@ -26,32 +28,8 @@ $wp_query = new WP_Query(array(
   </div>
 </article>
 
-<?php endwhile; ?>
-
-<?php /*
-<?php if ($wp_query->max_num_pages > 1) { ?>
-
-<div class="dws_pagination dws_margin_top_small">
-
-<?php
-$big = 999999999; // need an unlikely integer
-
-echo paginate_links( array(
-'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-'format' => '?paged=%#%',
-'current' => max( 1, get_query_var('paged') ),
-'total' => $wp_query->max_num_pages,
-'prev_text' => '&laquo;',
-'next_text' => '&raquo;',
-) );
+<?php 
+endwhile;
+wp_reset_query(); // Restore the original query
+get_footer();
 ?>
-
-</div> <!-- end dws_pagination-->
-
-<?php } ?>
-
-</div>
-*/
-?>
-
-<?php get_footer(); ?>
