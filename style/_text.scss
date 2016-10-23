@@ -36,5 +36,6 @@ h2 {
 a {
   text-decoration: none;
   color: rgba(0,0,0,0.8);
+  word-wrap: break-word; // Fix links that exceed the page's width
   @include underline(rgba(177,172,227,1));
 }
