@@ -3,7 +3,7 @@
 function enqueue_scripts_styles() {
   wp_enqueue_style('style', get_stylesheet_uri());
   wp_enqueue_style('fonts',
-    'https://brick.a.ssl.fastly.net/Fira+Sans:400,400i');
+    'https://brick.a.ssl.fastly.net/Oswald:300,400/Libre+Caslon+Text:400,700,400i');
 
   if(is_front_page()) {
     wp_enqueue_style('flickity',

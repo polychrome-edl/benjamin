@@ -1,4 +1,4 @@
-$base-line-height: 1.5rem;
+$base-line-height: 1.51rem;
 $lh: $base-line-height; // Shortcut
 
 $type-scale: (
@@ -20,9 +20,9 @@ $line-heights: (
   line-height: map-get($line-heights, $level);
 }
 
-@mixin underline($color, $weight: 0.1em, $offset: 0) {
+@mixin underline($color, $weight: 0.5em, $offset: 0) {
   background-image: linear-gradient(to bottom, $color 50%, transparent 50%);
   background-repeat: repeat-x;
   background-size: 2px $weight;
-  background-position: 0 (1em - $weight - $offset);
+  background-position: 0 (1em + $offset);
 }

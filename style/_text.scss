@@ -1,12 +1,13 @@
 
 /*
- * STYLES AND FONTS 
+ * STYLES AND FONTS
  */
 
 html {
-  font-family: "Fira Sans", "Hevletica Neue", sans-serif;
+  font-family: "Oswald", "Hevletica Neue", sans-serif;
   line-height: $base-line-height;
   font-size: 20px;
+  font-weight: 200;
   color: rgba(0, 0, 0, 0.8);
 
   @media (max-width: $width-breakpoint) {
@@ -16,7 +17,6 @@ html {
 
 p {
   @include type-setting();
-  letter-spacing: -.025em;
   margin-top: 0;
   margin-bottom: $lh;
 }
@@ -37,5 +37,10 @@ a {
   text-decoration: none;
   color: rgba(0,0,0,0.8);
   word-wrap: break-word; // Fix links that exceed the page's width
-  @include underline(rgba(177,172,227,1));
+  @include underline(rgba(177,172,227,1), 0.4em, 0.1em);
+}
+
+sub, sup {
+  font-size: 0.6rem;
+  line-height: 0;
 }

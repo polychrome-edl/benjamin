@@ -63,7 +63,7 @@
                 $custom['events_date_string'][0] != '')
                 echo $custom['events_date_string'][0];
               else {
-                if(isset($custom['events_display_time']) && 
+                if(isset($custom['events_display_time']) &&
                   $custom['events_display_time'][0] == 'true')
                   $format = 'j F G\hi';
                 else
