@@ -70,8 +70,10 @@
                   $format = 'j F';
 
                 echo date_i18n($format, $custom['events_date_start_epoque'][0]);
-                echo ' - ';
-                echo date_i18n($format, $custom['events_date_end_epoque'][0]);
+                if(!isset($custom['events_display_end'])) {
+                  echo ' - ';
+                  echo date_i18n($format, $custom['events_date_end_epoque'][0]);
+                }
               }
               ?></p>
             </div>
