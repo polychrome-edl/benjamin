@@ -7,6 +7,31 @@
   width: auto;
 }
 
+.event-feature__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,.65) 0,
+    transparent 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    background: none;
+  }
+}
+
 .event-feature__info {
   position: absolute;
   bottom: $lh / 2;
