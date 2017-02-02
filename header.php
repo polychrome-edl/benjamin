@@ -28,11 +28,5 @@
           ));
           ?>
         </nav>
-
-        <!-- Carousel -->
-        <?php
-        if(is_front_page())
-          include "carousel.php";
-        ?>
       </header>
       <main>
