@@ -3,9 +3,6 @@
         <!-- Footer -->
       </footer>
     </div>
-    <?php
-    wp_footer();
-  endif;
-  ?>
+    <?php wp_footer(); ?>
   </body>
 </html>
