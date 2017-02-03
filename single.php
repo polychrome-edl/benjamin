@@ -2,17 +2,17 @@
 get_header();
 ?>
 <?php
-if (have_posts()) :
-while ( have_posts() ) : the_post();
+if(have_posts()):
+  while(have_posts()): the_post();
 ?>
 
-<article class="article">
-  <header class="article__header">
-    <h1 class="article__title"><?php single_post_title(); ?></h1>
-    <p class="article__meta"><?php echo get_the_date(); ?>, <?php the_time(); ?></p>
+<article class="full-article">
+  <header class="header article-header">
+    <h1 class="title"><?php single_post_title(); ?></h1>
+    <p class="meta"><?php echo get_the_date(); ?>, <?php the_time(); ?></p>
+    <div class="thumbnail"></div>
   </header>
-  <div class="article__thumbnail"></div>
-  <section class="article__body">
+  <section class="body text-body">
     <?php the_content(); ?>
   </section>
 </article>

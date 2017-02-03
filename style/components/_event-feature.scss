@@ -1,0 +1,53 @@
+// An image-block with an overlay used to feature events
+
+.event-feature {
+  position: relative;
+
+  > .image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    // For events without any picture
+    //min-height: 225px;
+    background-color: pink;
+  }
+
+  > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,.65) 0,
+      transparent 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
+
+  > .overlay > .title {
+    @extend %h2;
+    margin: 0;
+  }
+
+  > .overlay > .info {
+    margin: 0;
+
+    @extend %font-sans;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  > .overlay a {
+    @extend %link;
+  }
+}

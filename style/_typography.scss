@@ -1,0 +1,83 @@
+//// Variables
+// For base font size, see "Base styling" below
+$base-line-height: 1.51rem;
+$lh: $base-line-height; // Shortcut
+
+//// Fonts
+
+%font-sans {
+  font-family: "Oswald", "Helvetica Neue", sans-serif;
+  letter-spacing: -.017em;
+  font-weight: 200;
+}
+
+%font-serif {
+  font-family: "Libre Caslon Text", "Adobe Caslon", serif;
+  letter-spacing: -.017em;
+}
+
+//// Base styling
+
+html {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+
+  @media (max-width: $width-breakpoint) {
+    font-size: 16px;
+  }
+}
+
+%default-text {
+  @extend %font-serif;
+  font-size: 1rem;
+  line-height: $lh;
+}
+
+// Headings
+
+%h1, %h2, %h3, %h4, %h5, %h6 {
+  @extend %font-sans;
+  font-weight: bold;
+}
+
+%h1 {
+  font-size: 1.777rem;
+  line-height: 1.4;
+}
+
+%h2 {
+  font-size: 1.333rem;
+  line-height: 1.5;
+}
+
+%h3 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+// Text types
+
+%link {
+  color: unset;
+  text-decoration: none;
+}
+
+%link:visited {
+  color: unset;
+}
+
+// <sup> and <sub> fix
+
+sub, sup {
+  font-size: 0.6em; // Relative to the direct parent's font size!
+  line-height: 0; // To avoid line-height discrepancies
+}
+
+//// Utilities
+
+@mixin underline($color, $weight: 0.5em, $offset: 0) {
+  background-image: linear-gradient(to bottom, $color 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-size: 2px $weight;
+  background-position: 0 (1em + $offset);
+}

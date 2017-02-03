@@ -1,0 +1,21 @@
+// A vertical sequence of blocks.
+
+.block-list {
+  &.-margin {
+    > .item {
+      margin-bottom: $lh;
+    }
+  }
+
+  @media (min-width: $width-breakpoint) {
+    &.-alternateX {
+      > .item:nth-child(2n+0) {
+        transform: translateX(-3%);
+      }
+
+      > .item:nth-child(2n+1) {
+        transform: translateX(3%);
+      }
+    }
+  }
+}

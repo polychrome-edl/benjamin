@@ -1,0 +1,29 @@
+// General-purpose menu that displays in a row
+
+.row-nav {
+  list-style-type: none;
+  min-height: $lh * 2;
+  padding: 0;
+  margin: $lh 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  // Wordpress doesn't let us choose a class name for menu items
+  // Only `.item` would be better.
+  > .item, .menu-item {
+    display: block;
+    padding: 0 $lh;
+
+    @extend %font-sans;
+    line-height: $lh;
+    text-align: center;
+  }
+
+  > .item > a, > .menu-item > a {
+    @extend %link;
+    @include underline(rgba(177,172,227,1), 0.4em, 0.1em);
+  }
+}

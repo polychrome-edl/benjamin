@@ -1,13 +1,15 @@
 <?php
+// One can set the `$eventFeatureClass` variable before including this template
+// in order to add custom classes to the block.
 $custom = get_post_custom();
 ?>
-<div class="event-feature">
-  <img alt="" class="event-feature__image"
+<div class="<?php echo $eventFeatureClass; ?> event-feature">
+  <img alt="" class="image"
     src="<?php the_post_thumbnail_url('large'); ?>"
     alt="">
-  <div class="event-feature__overlay">
-    <h1><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
-    <p class="event-feature__p event-feature__p--small"><?php
+  <div class="overlay">
+    <h1 class="title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <p class="info"><?php
     the_terms($post->id, 'event_type');
     ?> • <?php
     if(isset($custom['events_date_string']) &&

@@ -1,0 +1,34 @@
+// This is a component whose content is composed of unspecifed textual blocks.
+
+.text-body {
+  @extend %default-text;
+
+  > p,blockquote {
+    margin-top: 0;
+    margin-bottom: $lh / 2;
+  }
+
+  > h1,h2,h3,h4,h5,h6 {
+    margin-top: $lh;
+    margin-bottom: $lh / 2;
+  }
+
+  > h1 { @extend %h1; }
+  > h2 { @extend %h2; }
+  > h3 { @extend %h3; }
+
+  > p > iframe {
+    display: block;
+    width: 70%; // Might be overriden by HTML attributes.
+    max-width: 100%;
+    margin: $lh/2 auto;
+  }
+
+  a {
+    @extend %link;
+    word-wrap: break-word; // Fix links that exceed the page's width
+
+    // The offset (last) is adapted to Libre Caslon.
+    @include underline(rgba(177,172,227,1), 0.4em, -0.05em);
+  }
+}

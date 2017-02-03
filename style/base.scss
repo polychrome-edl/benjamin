@@ -1,30 +1,20 @@
-@import '_wp';
-@import '_type';
-
-// Global layout
+// Variables
 
 $width-breakpoint: 740px;
 
-body {
-  margin: 0;
-  background-color: white;
-}
+// Global imports
 
-.wrapper {
-  max-width: 960px;
-  margin: $lh auto;
-}
-
-main {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-// Header
-
-@import '_text';
-@import '_article';
-@import '_banner';
-@import '_feature';
-@import '_nav';
+@import '_typography';
+@import '_layout';
 @import '_wpimg';
+
+// Component imports
+@import 'components/_article-header';
+@import 'components/_article-card';
+@import 'components/_block-list';
+@import 'components/_event-feature';
+@import 'components/_full-article';
+@import 'components/_image-thumbnail';
+@import 'components/_row-nav';
+@import 'components/_text-body';
+@import 'components/_top-banner';

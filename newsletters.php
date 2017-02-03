@@ -1,6 +1,6 @@
-<?php /* Template Name: Newsletters Template*/ ?>
+<?php
+/* Template Name: Newsletters Template */
 
-<?php 
 get_header();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -11,25 +11,29 @@ $wp_query = new WP_Query(array(
   'paged' => $paged
 ));
 ?>
-
-
-
-<?php while(have_posts()): the_post(); ?>
-
-<article <?php post_class('article article--card'); ?>>
-  <div class="article--card__content">
-    <header class="article__header">
-      <h2 class="article__title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<div class="block-list -margin">
+<?php
+if(have_posts()):
+  while(have_posts()):
+    the_post();
+?>
+<article <?php post_class('item article-card'); ?>>
+  <div class="content">
+    <header class="header">
+      <h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
       <!-- Time? -->
     </header>
-    <section class="article__body">
+    <section class="body">
       <?php the_content(); ?>
     </section>
   </div>
 </article>
-
-<?php 
-endwhile;
+<?php
+  endwhile;
+endif;
+?>
+</div>
+<?php
 wp_reset_query(); // Restore the original query
 get_footer();
 ?>

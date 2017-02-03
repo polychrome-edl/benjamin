@@ -1,0 +1,7 @@
+// Full article = Article header + Text body
+
+.full-article {
+  @media (max-width: $width-breakpoint) {
+    padding: 0 $lh / 2;
+  }
+}

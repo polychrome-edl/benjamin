@@ -15,14 +15,14 @@
     <div class="wrapper">
       <header>
         <!-- Banner -->
-        <img alt="" src="<?php header_image(); ?>" class="banner">
+        <img alt="" src="<?php header_image(); ?>" class="top-banner">
 
         <!-- Menu -->
         <nav>
           <?php
           wp_nav_menu(array(
             'menu' => 'header-menu',
-            'menu_class' => 'nav nav--flex',
+            'menu_class' => 'row-nav',
             'container' => null,
             'depth' => 1
           ));

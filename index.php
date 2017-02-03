@@ -4,25 +4,25 @@ get_header();
 <header>
   <h1><?php post_type_archive_title(); ?></h1>
 </header>
+<div class="block-list -margin -alternateX">
 <?php
 if(have_posts()):
   while (have_posts()): the_post();
 ?>
-
-<article <?php post_class('article article--card article--card--row'); ?>>
+<article <?php post_class('item article-card'); ?>>
   <?php if(has_post_thumbnail()): ?>
-  <div class="article__thumbnail thumbnail-image">
-    <img alt="" class="thumbnail-image__image"
+  <div class="thumbnail">
+    <img alt="" class="image"
       src="<?php the_post_thumbnail_url('big'); ?>"
       alt="">
   </div>
   <?php endif; ?>
-  <div class="article--card__content">
-    <header class="article__header">
-      <h2 class="article__title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+  <div class="content">
+    <header class="header">
+      <h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
       <!-- Time? -->
     </header>
-    <section class="article__body article__body--excerpt">
+    <section class="body">
       <?php the_excerpt(); ?>
     </section>
   </div>
@@ -32,10 +32,11 @@ if(have_posts()):
   endwhile;
 endif;
 ?>
+</div>
 <nav>
-  <ul class="nav">
-    <li class="nav__item"><?php previous_posts_link(); ?></li>
-    <li class="nav__item"><?php next_posts_link(); ?></li>
+  <ul class="row-nav">
+    <li class="item"><?php previous_posts_link(); ?></li>
+    <li class="item"><?php next_posts_link(); ?></li>
   </ul>
 </nav>
 <?php

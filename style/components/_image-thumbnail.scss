@@ -1,0 +1,26 @@
+// A cropped image
+
+.image-thumbnail {
+  overflow: hidden;
+  position: relative;
+
+  > .image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    //z-index: -1; // Needed in order to render the box shadow over it
+  }
+
+  &.-vertical > .image {
+    width: auto;
+    height: 100%;
+  }
+
+  &.-horizontal > .image {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,61 @@
+// Article card module
+// Here, we follow a mobile-first approach.
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  padding: 0 0 0 0;
+
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+
+  > .thumbnail {
+    @extend .image-thumbnail;
+    @extend .-horizontal;
+
+    flex-basis: 150px;
+    flex-shrink: 0;
+  }
+
+  > .content {
+    @extend %default-text;
+    flex-grow: 1;
+    padding: 0 $lh $lh $lh;
+    background-color: white;
+  }
+
+  > .content > .body > p {
+    margin: 0;
+  }
+
+  > .content > .header > .title {
+    @extend %h2;
+    margin: $lh/1.5 0 $lh/2 0;
+  }
+
+  > .content > .header > .title > a {
+    @extend %link;
+    @include underline(rgba(177,172,227,1), 0.4em, 0.1em);
+  }
+
+  // Variations for big screens
+  @media (min-width: $width-breakpoint) {
+    flex-direction: row;
+
+    // Alternance
+    &:nth-child(2n+1) {
+        flex-direction: row-reverse;
+    }
+
+    > .content > .header > .title {
+      margin-top: 0;
+    }
+
+    > .thumbnail > .image {
+      //@extend .-vertical; // Impossible
+      width: auto !important;
+      height: 100% !important;
+    }
+  }
+}
