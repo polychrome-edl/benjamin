@@ -1,9 +1,14 @@
 <?php
-/* Template Name: Newsletters Template */
+/* Template Name: Newsletter list */
 
 get_header();
 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+// The query var is not the same for a normal page and a static front page...
+if(is_front_page())
+  $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+else
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $newsletter_cat_filter = get_cat_ID('newsletter');
 $wp_query = new WP_Query(array(
   'cat' => $newsletter_cat_filter,
@@ -33,6 +38,12 @@ if(have_posts()):
 endif;
 ?>
 </div>
+<nav>
+  <ul class="row-nav">
+    <li class="item"><?php previous_posts_link(); ?></li>
+    <li class="item"><?php next_posts_link(); ?></li>
+  </ul>
+</nav>
 <?php
 wp_reset_query(); // Restore the original query
 get_footer();
