@@ -12,7 +12,10 @@ else
 $wp_query = new WP_Query(array(
   'post_type' => 'events',
   'ID' => null,
-  'paged' => $paged
+  'paged' => $paged,
+  'order' => 'DESC',
+  'orderby' => 'meta_value_num',
+  'meta_key' => 'events_date_start_epoque'
 ));
 
 get_template_part('archive', 'events'); // Get the event archive template
