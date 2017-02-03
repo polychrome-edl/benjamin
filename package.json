@@ -1,0 +1,25 @@
+{
+  "name": "benjamin",
+  "version": "0.3.0",
+  "description": "Polychrome WordPress theme",
+  "main": "none",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polychrome-edl/benjamin.git"
+  },
+  "author": "sepsten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/polychrome-edl/benjamin/issues"
+  },
+  "homepage": "https://github.com/polychrome-edl/benjamin#readme"
+}
