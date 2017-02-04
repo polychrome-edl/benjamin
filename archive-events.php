@@ -11,13 +11,8 @@ if(have_posts()):
   endwhile;
 ?>
 </div>
-<nav>
-  <ul class="row-nav">
-    <li class="item"><?php previous_posts_link(); ?></li>
-    <li class="item"><?php next_posts_link(); ?></li>
-  </ul>
-</nav>
 <?php
+get_template_part('navigation');
 endif;
 
 get_footer();

@@ -4,12 +4,15 @@
   list-style-type: none;
   min-height: $lh * 2;
   padding: 0;
-  margin: $lh 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  &.-margin {
+    margin: $lh 0;
+  }
 
   // Wordpress doesn't let us choose a class name for menu items
   // Only `.item` would be better.
