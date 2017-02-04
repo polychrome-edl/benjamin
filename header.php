@@ -15,7 +15,9 @@
     <div class="wrapper">
       <header>
         <nav class="top-bar">
-          <img alt="" src="<?php header_image(); ?>" class="logo">
+          <a href="/" class="logolink">
+            <img alt="" src="<?php header_image(); ?>" class="logoimage">
+          </a>
           <?php
           wp_nav_menu(array(
             'menu' => 'header-menu',

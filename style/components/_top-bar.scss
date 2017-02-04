@@ -5,8 +5,14 @@
   flex-direction: row;
   align-items: center;
 
-  > .logo {
+  > .logolink {
+    @extend %link;
+    display: block;
     margin: 0 $lh;
+  }
+
+  > .logolink > .logoimage {
+    display: block;
     height: $lh * 2;
     width: auto;
   }
