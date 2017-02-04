@@ -1,0 +1,17 @@
+// The top bar contains the logo and the menu.
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  > .logo {
+    margin: 0 $lh;
+    height: $lh * 2;
+    width: auto;
+  }
+
+  > .menu {
+    flex-grow: 1;
+  }
+}
