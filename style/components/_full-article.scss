@@ -1,7 +1,26 @@
 // Full article = Article header + Text body
 
 .full-article {
+  > .header {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto $lh auto;
+
+    &.-wide {
+      max-width: 840px;
+    }
+  }
+
+  > .body {
+    margin: 0 auto;
+    width: 720px;
+  }
+
   @media (max-width: $width-breakpoint) {
-    padding: 0 $lh / 2;
+    > .body {
+      box-sizing: border-box;
+      padding: 0 $lh / 2;
+      width: 100%;
+    }
   }
 }

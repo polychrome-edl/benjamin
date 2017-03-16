@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<div class="block-list -alternateX">
+<div class="block-list -alternateX -w720">
 <?php
 if(have_posts()):
   $eventFeatureClass = "item"; // Cf. event-feature.php
