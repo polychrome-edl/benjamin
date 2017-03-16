@@ -14,4 +14,9 @@
     margin: 0 0 $lh 0;
     color: rgba(0,0,0,0.5);
   }
+
+  @media (max-width: $width-breakpoint) {
+    box-sizing: border-box;
+    padding: 0 $lh / 2;
+  }
 }
