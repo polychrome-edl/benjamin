@@ -4,7 +4,7 @@ get_header();
 <header>
   <h1><?php post_type_archive_title(); ?></h1>
 </header>
-<div class="block-list -margin -alternateX">
+<div class="block-list -margin -alternateX -w720">
 <?php
 if(have_posts()):
   while (have_posts()): the_post();
